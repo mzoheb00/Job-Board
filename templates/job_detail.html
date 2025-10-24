@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>{{ job.title }}</h2>
+  <p><strong>Company:</strong> {{ job.company }}</p>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p>{{ job.description }}</p>
+
+  {% if session.get('user_id') and not session.get('is_employer') %}
+    <a href="{{ url_for('apply', job_id=job.id) }}" class="btn">Apply Now</a>
+  {% else %}
+    <p><em>Login as a candidate to apply.</em></p>
+  {% endif %}
+</div>
+{% endblock %}

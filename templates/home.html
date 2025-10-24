@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1>Welcome to the Job Board</h1>
+  <p>Find your next opportunity or the perfect candidate.</p>
+
+  <h2>Featured Jobs</h2>
+  <div class="job-list">
+    {% for job in jobs %}
+      <div class="job-card">
+        <h3><a href="{{ url_for('job_detail', job_id=job.id) }}">{{ job.title }}</a></h3>
+        <p><strong>{{ job.company }}</strong> — {{ job.location }}</p>
+        <small>Posted on {{ job.posted_at.strftime('%Y-%m-%d') }}</small>
+      </div>
+    {% else %}
+      <p>No jobs found.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

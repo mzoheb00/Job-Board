@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Register</h2>
+  <form method="POST">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+
+    <!-- Updated checkbox -->
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="is_employer" name="is_employer">
+      <label for="is_employer">Register as Employer</label>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+{% endblock %}

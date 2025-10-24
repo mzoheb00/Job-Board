@@ -1,0 +1,171 @@
+/* Make html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should expand to fill available space */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* makes it grow to push footer down */
+}
+
+/* Navigation Bar */
+nav {
+  background: #1e1e1e;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Navigation container */
+.nav-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Job Cards */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-card {
+  background: #fafafa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn, button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: #0056b3;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Flash messages */
+.flash-messages {
+  width: 90%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.flash {
+  background: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto; /* push footer to bottom */
+}
+
+/* Align checkbox and label nicely */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between checkbox and text */
+  margin: 10px 0; /* optional spacing from other inputs */
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto; /* default checkbox size */
+  margin: 0;   /* remove extra default margin */
+}
+
+/* Small Edit Button */
+.btn-edit {
+    background-color: #4CAF50; /* green */
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Small Delete Button */
+.btn-delete {
+    background-color: #f39c12; /* orange */
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Optional: hover effects */
+.btn-edit:hover {
+    background-color: #45a049;
+}
+.btn-delete:hover {
+    background-color: #e67e22;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}

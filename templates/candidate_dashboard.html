@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Candidate Dashboard</h2>
+
+  <h3>Your Applications</h3>
+  <ul>
+    {% for app in applications %}
+      <li>
+        <strong>{{ app.job.title }}</strong> at {{ app.job.company }}
+        — Applied on {{ app.applied_at.strftime('%Y-%m-%d') }}
+      </li>
+    {% else %}
+      <li>You haven’t applied to any jobs yet.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

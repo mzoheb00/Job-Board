@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Apply for {{ job.title }}</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Upload Resume:</label><br>
+    <input type="file" name="resume" required><br><br>
+    <textarea name="message" placeholder="Write a short message..." required></textarea><br>
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
+{% endblock %}
